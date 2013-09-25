@@ -11,7 +11,7 @@
 
 
 static NSDictionary *stateDictionary;
-
+static NSString *CellIdentifier = @"MyStateCell";
 
 @interface StateSelctionViewController ()
 
@@ -31,19 +31,32 @@ static NSDictionary *stateDictionary;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"MyClass"];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
 
     if (!stateDictionary) {
-        stateDictionary = @{@"United States":[NSArray arrayWithObjects:@"Alabama", @"Alaska", @"Arizona",
-                                              @"Arkansas", @"California", @"Colorado", @"Connecticut", @"Delaware", @"District of Columbia",
-                                              @"Florida", @"Georgia", @"Hawaii", @"Idaho", @"Illinois", @"Indiana", @"Iowa", @"Kansas",
-                                              @"Kentucky", @"Louisiana", @"Maine", @"Maryland", @"Massachusetts", @"Michigan", @"Minnesota",
-                                              @"Mississippi", @"Missouri", @"Montana", @"Nebraska", @"Nevada", @"New Hampshire",
-                                              @"New Jersey", @"New Mexico", @"New York", @"North Carolina", @"North Dakota", @"Ohio",     @"Oklahoma",
-                                              @"Oregon", @"Pennsylvania", @"Rhode Island", @"South Carolina", @"South Dakota",
-                                              @"Tennessee", @"Texas", @"Utah", @"Vermont", @"Virginia", @"Washington", @"West Virginia",
-                                              @"Wisconsin", @"Wyoming", nil],
-                            @"Germany" : @[ @"Baden-Würtemberg", @"Bavaria",@"Berlin",@"Brandenburg",@"Bremen",@"Hamburg", @"Hesse", @"Lower Saxony" ,@"Mecklenburg-Vorpommern", @"North Rhine-Westphalia", @"Rhineland-Palatinate", @"Saarland",@"Saxony", @"Saxony-Anhalt", @"Schleswig-Holstein", @"Thuringia"]
+        stateDictionary = @{@"United States":@[@"Alabama", @"Alaska", @"Arizona",
+                                               @"Arkansas", @"California", @"Colorado",
+                                               @"Connecticut", @"Delaware", @"District of Columbia",
+                                               @"Florida", @"Georgia", @"Hawaii",
+                                               @"Idaho", @"Illinois", @"Indiana",
+                                               @"Iowa", @"Kansas", @"Kentucky",
+                                               @"Louisiana", @"Maine", @"Maryland",
+                                               @"Massachusetts", @"Michigan", @"Minnesota",
+                                               @"Mississippi", @"Missouri", @"Montana",
+                                               @"Nebraska", @"Nevada", @"New Hampshire",
+                                               @"New Jersey", @"New Mexico", @"New York",
+                                               @"North Carolina", @"North Dakota", @"Ohio",
+                                               @"Oklahoma", @"Oregon", @"Pennsylvania",
+                                               @"Rhode Island", @"South Carolina", @"South Dakota",
+                                               @"Tennessee", @"Texas", @"Utah", @"Vermont",
+                                               @"Virginia", @"Washington", @"West Virginia",
+                                               @"Wisconsin", @"Wyoming"],
+                            @"Germany" : @[ @"Baden-Würtemberg", @"Bavaria",@"Berlin",
+                                            @"Brandenburg",@"Bremen",@"Hamburg",
+                                            @"Hesse", @"Lower Saxony" ,@"Mecklenburg-Vorpommern",
+                                            @"North Rhine-Westphalia", @"Rhineland-Palatinate",
+                                            @"Saarland",@"Saxony", @"Saxony-Anhalt",
+                                            @"Schleswig-Holstein", @"Thuringia"]
                             
                             }
         
@@ -59,7 +72,6 @@ static NSDictionary *stateDictionary;
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"MyCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.textLabel.text = stateDictionary[_selectedNation][indexPath.row];
     return cell;
