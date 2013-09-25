@@ -57,10 +57,7 @@ static NSString *CellIdentifier = @"MyStateCell";
                                             @"North Rhine-Westphalia", @"Rhineland-Palatinate",
                                             @"Saarland",@"Saxony", @"Saxony-Anhalt",
                                             @"Schleswig-Holstein", @"Thuringia"]
-                            
-                            }
-        
-        ;
+                            };
     }
 }
 
@@ -80,7 +77,11 @@ static NSString *CellIdentifier = @"MyStateCell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self.delegate selectedState:stateDictionary[_selectedNation][indexPath.row] forNation:_selectedNation];
-    [self.navigationController popViewControllerAnimated:YES];
+    if(self.presentingViewController)
+        [self dismissViewControllerAnimated:NO completion:NULL];
+    else
+        [self.navigationController popViewControllerAnimated:YES];
+    
 }
 
 @end

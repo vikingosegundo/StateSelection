@@ -55,7 +55,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="uhf-AE-2In" kind="push" identifier="showDetail" id="Oyk-Oq-AcH"/>
+                                            <segue destination="uhf-AE-2In" kind="modal" identifier="showDetail" animates="NO" id="Oyk-Oq-AcH"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="MdS-0c-7bD" detailTextLabel="hR1-jL-vkI" style="IBUITableViewCellStyleSubtitle" id="LrN-vn-Ys5">
@@ -110,7 +110,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyStateCell" id="h6o-2O-KLK">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="h6o-2O-KLK" id="Wx1-l9-W0Q">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
