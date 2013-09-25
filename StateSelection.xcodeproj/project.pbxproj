@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		643E024417F3965D00A7A847 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 643E024317F3965D00A7A847 /* README.md */; };
 		64ED4EFA17F352C6000C2D1F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64ED4EF917F352C6000C2D1F /* Foundation.framework */; };
 		64ED4EFC17F352C6000C2D1F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64ED4EFB17F352C6000C2D1F /* CoreGraphics.framework */; };
 		64ED4EFE17F352C6000C2D1F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64ED4EFD17F352C6000C2D1F /* UIKit.framework */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		643E024317F3965D00A7A847 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		64ED4EF617F352C6000C2D1F /* StateSelection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StateSelection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64ED4EF917F352C6000C2D1F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		64ED4EFB17F352C6000C2D1F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,6 +87,7 @@
 		64ED4EED17F352C6000C2D1F = {
 			isa = PBXGroup;
 			children = (
+				643E024317F3965D00A7A847 /* README.md */,
 				64ED4EFF17F352C6000C2D1F /* StateSelection */,
 				64ED4F2117F352C7000C2D1F /* StateSelectionTests */,
 				64ED4EF817F352C6000C2D1F /* Frameworks */,
@@ -235,6 +238,7 @@
 			files = (
 				64ED4F1517F352C7000C2D1F /* Images.xcassets in Resources */,
 				64ED4F0417F352C7000C2D1F /* InfoPlist.strings in Resources */,
+				643E024417F3965D00A7A847 /* README.md in Resources */,
 				64ED4F0D17F352C7000C2D1F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +470,7 @@
 				64ED4F2D17F352C7000C2D1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		64ED4F2E17F352C7000C2D1F /* Build configuration list for PBXNativeTarget "StateSelectionTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +479,7 @@
 				64ED4F3017F352C7000C2D1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
